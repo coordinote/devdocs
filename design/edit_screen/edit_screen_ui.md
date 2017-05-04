@@ -23,7 +23,7 @@
 
 ### データ受取方法, 受渡し方法, etc.
 * このページをAngular2 に渡してtemplateに記述させる
-* `clip_view`
+* `clip-view`
   - 今回書いているノートのリストを表示する部分
 * `write-view`
   - 現在書いているノートの編集部分
@@ -31,7 +31,7 @@
 ### 主なプロセス
 * html5とless(css)，jsを用いてページを記述
 * Angular2にviewとしてhtmlを読み込ませる
-* templateを用いて，`clip_view`，`write-view`にデータを表示させていく
+* templateを用いて，`clip-view`，`write-view`にデータを表示させていく
 
 ### メソッド(関数)
 * なし(jsに各種)
