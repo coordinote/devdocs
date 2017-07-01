@@ -51,11 +51,17 @@ DBのメソッドと使用方法に関する設計
 * `get_tiles_cid(cid, callback)`
   - `cid`: 型: string, 検索対象タイルの`cid`
   - `callback`: 型: function, 関数の第1引数に対応する全てのタイルドキュメント(型: array)
+* `get_clips_tags(callback)`
+  - `callback`: 型: function, 関数の第1引数に全 `clip` の登録済み `tag` (型: array)
+* `get_tiles_cid_tags(cid, callback)`
+  - `cid`: 型: string, 検索対象タイルの`cid`
+  - `callback`: 型: function, 関数の第1引数に対応する全 `tile` の登録済み `tag` (型: array)
 
 ### フィールド(変数)
 * なし(jsに各種)
 
 ## 備考
+* テストコード(`/path/to/coordinote/database/test/` 以下)を参照
 * `set_clip()`のサンプルコードを以下に記述
 
 ```
