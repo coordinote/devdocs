@@ -46,16 +46,22 @@ DBのメソッドと使用方法に関する設計
     - `con`: 型: string, タイルのコンテンツ
   - `callback`: 型: function, コールバック関数の第1引数に生成されたドキュメント(型: object)
 * `get_clip_id(id, callback)`
-  - `id`: 型: string, 検索対象タイルの`_id`
+  - `id`: 型: string, 検索対象クリップの`_id`
   - `callback`: 型: function, 関数の第1引数にクリップ + 対応する全てのタイルドキュメント(型: object)
 * `get_tiles_cid(cid, callback)`
   - `cid`: 型: string, 検索対象タイルの`cid`
   - `callback`: 型: function, 関数の第1引数に対応する全てのタイルドキュメント(型: array)
-* `get_clips_tags(callback)`
+* `get_allclipstags(callback)`
   - `callback`: 型: function, 関数の第1引数に全 `clip` の登録済み `tag` (型: array)
-* `get_tiles_cid_tags(cid, callback)`
+* `get_clips_tags(clip_tags, callback)`
+  - `clip_tags`: 型: array, `tag`要素での検索ワード
+  - `callback`: 型: array, 関数の第1引数に該当する`clip` (型: array)
+* `get_alltilestags_cid(cid, callback)`
   - `cid`: 型: string, 検索対象タイルの`cid`
   - `callback`: 型: function, 関数の第1引数に対応する全 `tile` の登録済み `tag` (型: array)
+* `get_tiles_cidtags(cid, tile_tags, callback)`
+  - `cid`: 型: string, 検索対象タイルの`cid`
+  - `tile_tags`: 型: array, `tag`要素での検索ワード
 
 ### フィールド(変数)
 * なし(jsに各種)
