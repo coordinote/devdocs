@@ -64,6 +64,7 @@ DBのメソッドと使用方法に関する設計
 * `find_tiles_cidtags(cid, tile_tags, callback)`
   - `cid`: 型: string, 検索対象タイルの`cid`
   - `tile_tags`: 型: array, `tag`要素での検索ワード
+  - `callback`: 型: function, 関数の第１引数に対応する全タイルドキュメント(型: array)
 * `find_clipids_tags(clip_tags, s_date, e_date, callback)`
   - `clip_tags`: 型: array, `tag`要素での検索ワード
   - `s_date`: 型: Date, 検索開始の日付
@@ -71,8 +72,39 @@ DBのメソッドと使用方法に関する設計
   - `callback`: 型: function, 関数の第１引数に対応する全 `clip` の `_id` (型: array)
 
 #### update
+* `update_cliptags_id(clip_tags, cid, callback)`
+  - `clip_tags`: 型: array, クリップの更新後の `tag`
+  - `cid`: 型: string, 更新対象クリップの`_id`
+  - `callback`: 型: function, 関数の第１引数に更新後クリップドキュメント(型: object)
+* `update_tileidx_cidid(idx, cid, tid, callback)`
+  - `idx`: 型: integer, タイル更新後の `idx`
+  - `cid`: 型: string, 更新対象タイルの`cid`
+  - `tid`: 型: string, 更新対象タイルの`_id`
+  - `callback`: 型: function, 関数の第１引数に更新後タイルドキュメント(型: object)
+* `update_tilecol_cidid(col, cid, tid, callback)`
+  - `col`: 型: integer, タイル更新後の `col`
+  - `cid`: 型: string, 更新対象タイルの`cid`
+  - `tid`: 型: string, 更新対象タイルの`_id`
+  - `callback`: 型: function, 関数の第１引数に更新後タイルドキュメント(型: object)
+* `update_tiletags_cidid(tags, cid, tid, callback)`
+  - `tags`: 型: integer, タイル更新後の `tag`
+  - `cid`: 型: string, 更新対象タイルの`cid`
+  - `tid`: 型: string, 更新対象タイルの`_id`
+  - `callback`: 型: function, 関数の第１引数に更新後タイルドキュメント(型: object)
+* `update_tilecon_cidid(con, cid, tid, callback)`
+  - `con`: 型: integer, タイル更新後の `con`
+  - `cid`: 型: string, 更新対象タイルの`cid`
+  - `tid`: 型: string, 更新対象タイルの`_id`
+  - `callback`: 型: function, 関数の第１引数に更新後タイルドキュメント(型: object)
 
 #### delete
+* `delete_clip_id(cid, callback)`
+  - `cid`: 型: string, 削除対象クリップの`_id`
+  - `callback`: 型: function, コールバック関数
+* `delete_tile_cidid(cid, tid, callback)`
+  - `cid`: 型: string, 削除対象タイルの`cid`
+  - `tid`: 型: string, 削除対象タイルの`_id`
+  - `callback`: 型: function, コールバック関数
 
 ### フィールド(変数)
 * なし(jsに各種)
