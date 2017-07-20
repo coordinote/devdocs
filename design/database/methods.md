@@ -114,7 +114,7 @@ DBのメソッドと使用方法に関する設計
 * `insert_clip()`のサンプルコードを以下に記述
 
 ```
-const NeDB_Module = require('/path/to/coordinote/database/nedb_module.js')  
+const NeDB_Module = require('/path/to/coordinote/nedb_module')  
 let nedb_module = new NeDB_Module()  
 nedb_module.insert_clip(['test', 'coordinote'], (newdoc) => {  
   console.log(newdoc)  
