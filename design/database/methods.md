@@ -110,7 +110,7 @@ DBのメソッドと使用方法に関する設計
 * なし(jsに各種)
 
 ## 備考
-* テストコード(`/path/to/coordinote/database/test/` 以下)を参照
+* テストコード(`/path/to/coordinote/nedb_module/test/` 以下)を参照
 * `insert_clip()`のサンプルコードを以下に記述
 
 ```
