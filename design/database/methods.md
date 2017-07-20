@@ -11,14 +11,14 @@ DBのメソッドと使用方法に関する設計
   * 実装先ブランチ
     - `database`
   * 実装先
-    - `database/`
+    - `nedb_module/`
   * 重要度
     - 高
 
 ## 設計
 
 ### データ受取方法, 受渡し方法, etc.
-* `/path/to/coordinote/database/nedb_module.js`をrequire
+* `/path/to/coordinote/nedb_module`をrequire
 * requireしたオブジェクトのインスタンスを`new` で作成
 * 作成したインスタンスからメソッドを実行
 * 引数の最後のコールバック関数に戻り値を代入する

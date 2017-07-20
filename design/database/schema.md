@@ -13,11 +13,16 @@ DBのスキーマの設計と定義
   * 実装先ブランチ
     - `database`
   * 実装先
-    - `database/`
+    - `nedb_module/`
   * 重要度
     - 高
 
 ## 設計
+
+## 保存先
+* 基本的に以下のディレクトリに配置される
+  - `/path/to/home/.coordinote/database/`
+* ファイル名に関する記述は`collection_split.md`にて
 
 ## clip_schema
 + `date`
@@ -63,5 +68,18 @@ DBのスキーマの設計と定義
   - 自動追加
 
 ## 備考
-なし
+* 以上はファイル的スキーマ定義であり，論理的なスキーマは以下のとおりである
+
++ `date`
++ `tile_file`
++ `tag`
++ `_id`
++ `tile(array)`
+  + `cid`
+  + `idx`
+  + `col`
+  + `tag`
+  + `sty`
+  + `con`
+  + `_id`
 
