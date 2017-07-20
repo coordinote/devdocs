@@ -16,11 +16,22 @@ socketのイベント名は"'emit側から見て行う処理'\_'受け渡しす�
   - データは送らないがデータがほしい場合に使用する
 - res
   - send,reqに対してデータを返す場合に使用する
-
+- update
+  - DBのアップデート処理
+- delete
+  - DBの削除処理
 ### 受け渡しするデータの概要
 何のデータかわかるようにすれば特に指定しない。
 
 ## イベント
+- send_connect
+  - serverへのコネクション情報の送信
+- send_writeconnect
+  - canvasのwriteがコネクトしたという情報の送信
+- send_readconnect
+  - canvasのreadがコネクトしたという情報の送信
+- res_reloadevent
+  - ページの更新イベントを返す
 - send_pathdata
   - canvasのパスのデータの送信
 - res_pathdata
@@ -39,15 +50,31 @@ socketのイベント名は"'emit側から見て行う処理'\_'受け渡しす�
   - saveされたclipのcidを返す
 - save_tile
   - tileのセーブ
-- get_alltags
+- rec_tid
+  - saveされたtileのtidを返す
+- get_allcliptags
   - すべてのタグを要求する
-- res_alltags
+- res_allcliptags
   - すべてのタグを返す
-- send_connect
-  - serverへのコネクション情報の送信
-- send_writeconnect
-  - canvasのwriteがコネクトしたという情報の送信
-- send_readid
-  - canvasのreadのidの送信
-- res_reloadevent
-  - ページの更新イベントを返す
+- send_clipsearchdata
+  - clipの検索データの送信
+- res_alltiletags
+  - 検索結果に沿ったタイルのタグを返す
+- res_clips
+  - 検索結果に沿ったクリップを返す
+- send_tilesearchdata
+  - tileの検索データの送信
+- res_tiles
+  - 検索結果に沿ったタイルを返す
+- update_tiletag
+  - タイルのタグのアップデート
+- update_tilecon
+  - タイルコンテンツのアップデート
+- update_tilecol
+  - タイルのカラムサイズのアップデート
+- update_tileidx
+  - タイルインデックスのアップデート
+- delete_clip
+  - クリップの削除
+- delete_tile
+  - tileの削除
