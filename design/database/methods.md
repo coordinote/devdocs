@@ -50,6 +50,10 @@ DBのメソッドと使用方法に関する設計
 * `find_clip_id(id, callback)`
   - `id`: 型: string, 検索対象クリップの`_id`
   - `callback`: 型: function, 関数の第1引数にクリップ + 対応する全てのタイルドキュメント(型: object)
+* `find_tile_cidid(cid, tid, callback)`
+  - `cid`: 型: string, 検索対象タイルの`cid`
+  - `tid`: 型: string, 検索対象タイルの`_id`
+  - `callback`: 型: function, 関数の第１引数に対応するタイルドキュメント(型: object)
 * `find_tiles_cid(cid, callback)`
   - `cid`: 型: string, 検索対象タイルの`cid`
   - `callback`: 型: function, 関数の第1引数に対応する全てのタイルドキュメント(型: array)
