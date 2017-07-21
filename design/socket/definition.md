@@ -78,3 +78,5 @@ socketのイベント名は"'emit側から見て行う処理'\_'受け渡しす�
   - クリップの削除
 - delete_tile
   - tileの削除
+- update_cliptags
+  - cliptagのアップデート
